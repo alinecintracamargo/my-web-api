@@ -22,5 +22,13 @@ public class usuarioController {
     public Usuario getOne(@PathVariable("username") String username) {
         return repository.findByUsername(String.valueOf(Integer.valueOf(username)));
     }
+    @DeleteMapping("/user/{id}")
+    public void delete(@PathVariable("id") Integer id){
+        repository.deleteById(id);
+    }
+    @PostMapping("/users")
+    public void postUser(@RequestBody Usuario usuario) {
+        repository.save(usuario);
+    }
 
 }

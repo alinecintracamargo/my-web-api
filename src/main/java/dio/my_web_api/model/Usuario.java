@@ -4,6 +4,14 @@ public class Usuario {
     private String username;
     private String password;
 
+    @Override
+    public String toString() {
+        return "Usuario{" +
+                "username='" + username + '\'' +
+                ", password='" + password + '\'' +
+                '}';
+    }
+
     // Construtores, getters e setters
 
     public Usuario(String username, String password) {
